@@ -21,3 +21,5 @@
 include:
   - board: xiao_ble
     shield: mykeyboard
+  - board: xiao_ble
+    shield: tester_xiao
