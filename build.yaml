@@ -20,5 +20,4 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: mykeyboard
-    
+    shield: thumbRotary_left rgbled_adapter
