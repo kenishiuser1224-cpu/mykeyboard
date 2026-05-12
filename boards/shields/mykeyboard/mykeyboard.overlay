@@ -1,0 +1,55 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <11>;
+        rows = <1>;
+        map = <
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)
+            RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9)
+            RC(0,10)
+        >;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        input-gpios
+            = <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D0  */
+            , <&gpio0 3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D1  */
+            , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D2  */
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D3  */
+            , <&gpio0 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D4  */
+            , <&gpio0 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D5  */
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D6  */
+            , <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D7  */
+            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D8  */
+            , <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D9  */
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* D10 */
+            ;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        led_red: led_0 {
+            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;  /* 赤LED */
+        };
+        led_green: led_1 {
+            gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;  /* 緑LED */
+        };
+        led_blue: led_2 {
+            gpios = <&gpio0 6  GPIO_ACTIVE_LOW>;  /* 青LED */
+        };
+    };
+
+    aliases {
+        led0 = &led_red;
+        led1 = &led_green;
+        led2 = &led_blue;
+    };
+};
