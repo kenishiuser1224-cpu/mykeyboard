@@ -1,4 +1,4 @@
-if SHIELD_MYKEYBOARD
+if SHIELD_MYKEYBOARD2
 
 config ZMK_KEYBOARD_NAME
     default "mykeyboard2"
