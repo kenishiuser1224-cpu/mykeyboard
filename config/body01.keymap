@@ -1,6 +1,6 @@
 /*
  * mykeyboard.keymap
- * 30 keys + 2 rotary encoders
+ * 30 keys + 2 rotary encoders (ENC0: row3/col0, ENC1: row6/col1)
  * Generated for use with keymap-editor (nickcoutsos.github.io/keymap-editor)
  */
 
@@ -23,30 +23,39 @@
         default_layer {
             label = "DEFAULT";
 
-            // ┌─────┬─────┬─────┬─────┬─────┬─────┐
-            // │  0  │  1  │  2  │  3  │  4  │  5  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │  6  │  7  │  8  │  9  │ 10  │ 11  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ 12  │ 13  │ 14  │ 15  │ 16  │ 17  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ 18  │ 19  │ 20  │ 21  │ 22  │ 23  │
-            // ├─────┼─────┼─────┼─────┼─────┼─────┤
-            // │ 24  │ 25  │ 26  │ 27  │ 28  │ 29  │
-            // └─────┴─────┴─────┴─────┴─────┴─────┘
-            // ENC0: Left encoder   ENC1: Right encoder
-
+            // 通常キー30個のbindings
+            // 順序はinfo.jsonのlayout配列と一致させること
+            // type:encoder のキー（ENC0, ENC1）はbindingsに含めない
             bindings = <
-                &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y
-                &kp A    &kp S    &kp D    &kp F    &kp G    &kp H
-                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N
-                &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6
-                &kp N7   &kp N8   &kp N9   &kp N0   &kp SPC  &kp RET
+                // row0: Num ( ) =
+                &kp KP_NUM  &kp LPAR    &kp RPAR    &kp EQUAL
+                // row1: ENC1 ENC2 ENC3 Fn2 / * - Copy
+                &kp A       &kp B       &kp C
+                &kp SLASH   &kp STAR    &kp MINUS
+                &kp COPY
+                // row2: 7 8 9 + Paste
+                &kp KP_N7   &kp KP_N8   &kp KP_N9
+                &kp KP_PLUS
+                &kp PASTE
+                // row3: [ENC0 skip] 4 5 6 All
+                &kp KP_N4   &kp KP_N5   &kp KP_N6
+                &kp ALL
+                // row4: tab 1 2 3 Enter
+                &kp TAB
+                &kp KP_N1   &kp KP_N2   &kp KP_N3
+                &kp KP_ENTER
+                // row5: 0 . Fn4
+                &kp KP_N0   &kp KP_DOT  &kp F4
+                // row6: ↑ [ENC1 skip]
+                &kp UP
+                // row7: ← ↓ → Fn1 Fn2 Fn3
+                &kp LEFT    &kp DOWN    &kp RIGHT
+                &kp F1      &kp F2      &kp F3
             >;
 
             sensor-bindings = <
-                &rot_kp C_VOL_DN C_VOL_UP
-                &rot_kp PG_DN    PG_UP
+                &rot_kp C_VOL_DN C_VOL_UP   // ENC0（左上）: 音量
+                &rot_kp PG_DN    PG_UP       // ENC1（右下）: ページ
             >;
         };
     };
