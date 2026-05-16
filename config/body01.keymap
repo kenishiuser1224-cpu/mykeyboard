@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 / {
     behaviors {
@@ -26,31 +25,16 @@
             // 通常キー30個のbindings
             // 順序はinfo.jsonのlayout配列と一致させること
             // type:encoder のキー（ENC0, ENC1）はbindingsに含めない
+
             bindings = <
-                // row0: Num ( ) =
-                &kp KP_NUM  &kp LPAR    &kp RPAR    &kp EQUAL
-                // row1: ENC1 ENC2 ENC3 Fn2 / * - Copy
-                &kp A       &kp B       &kp C
-                &kp SLASH   &kp STAR    &kp MINUS
-                &kp COPY
-                // row2: 7 8 9 + Paste
-                &kp KP_N7   &kp KP_N8   &kp KP_N9
-                &kp KP_PLUS
-                &kp PASTE
-                // row3: [ENC0 skip] 4 5 6 All
-                &kp KP_N4   &kp KP_N5   &kp KP_N6
-                &kp ALL
-                // row4: tab 1 2 3 Enter
-                &kp TAB
-                &kp KP_N1   &kp KP_N2   &kp KP_N3
-                &kp KP_ENTER
-                // row5: 0 . Fn4
-                &kp KP_N0   &kp KP_DOT  &kp F4
-                // row6: ↑ [ENC1 skip]
-                &kp UP
-                // row7: ← ↓ → Fn1 Fn2 Fn3
-                &kp LEFT    &kp DOWN    &kp RIGHT
-                &kp F1      &kp F2      &kp F3
+&kp KP_NUM  &kp LPAR   &kp RPAR      &kp EQUAL
+&kp A       &kp B      &kp C         &kp SLASH     &kp STAR    &kp MINUS  &kp COPY  &kp KP_N7
+&kp KP_N8   &kp KP_N9  &kp KP_PLUS   &kp LC(PLUS)  &kp KP_N4
+&kp KP_N5   &kp KP_N6  &kp ALL       &kp TAB       &kp KP_N1
+&kp KP_N2   &kp KP_N3  &kp KP_ENTER  &kp KP_N0     &kp KP_DOT
+&kp F4      &kp UP     &kp LEFT
+&kp DOWN    &kp RIGHT
+&kp F1      &kp F2     &kp F3
             >;
 
             sensor-bindings = <
