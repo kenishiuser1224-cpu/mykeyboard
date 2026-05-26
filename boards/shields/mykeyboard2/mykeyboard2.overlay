@@ -1,6 +1,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+    aliases {
+        led-red = &led0;    // P0.26
+        led-green = &led1;  // P0.30
+        led-blue = &led2;   // P0.06
+    };
+};
+
+/ {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
