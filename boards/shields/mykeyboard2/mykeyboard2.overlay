@@ -2,6 +2,41 @@
 
 / {
     aliases {
+        ec11 = &encoder0;
+    };
+};
+
+&pinctrl {
+    ec11_default: ec11_default {
+        group1 {
+            psels = <NRF_PSEL(GPIOTE_IN, 1, 0)>,  /* A相のピン番号 */
+                    <NRF_PSEL(GPIOTE_IN, 0, 9)>;   /* B相のピン番号 */
+        };
+    };
+};
+
+encoder0: encoder_0 {
+    compatible = "alps,ec11";
+    a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   /* D11 = P1.00 */
+    b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   /* D12 = P0.09 */
+    steps = <80>;
+    status = "okay";
+};
+
+/ {
+    aliases {
+        ec11 = &encoder0;
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder0>;
+        triggers-per-rotation = <20>;
+    };
+};
+
+/ {
+    aliases {
         led-red = &led0;    // P0.26
         led-green = &led1;  // P0.30
         led-blue = &led2;   // P0.06
