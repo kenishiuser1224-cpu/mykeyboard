@@ -2,11 +2,15 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default";
-        kscan = <&kscan0>;
-        transform = <&default_transform>;
+    physical_layouts {
+        compatible = "zmk,physical-layouts";
+
+        physical_layout0: physical_layout_0 {
+            compatible = "zmk,physical-layout";
+            display-name = "Default";
+            kscan = <&kscan0>;
+            transform = <&default_transform>;
+        };
     };
 };
 
