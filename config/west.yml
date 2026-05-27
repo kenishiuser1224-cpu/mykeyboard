@@ -12,6 +12,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: v0.7.0   # ← 安定版に固定
       import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
