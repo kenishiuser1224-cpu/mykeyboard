@@ -22,4 +22,7 @@ include:
   - board: xiao_ble
     shield: mykeyboard
   - board: xiao_ble
-    shield: mykeyboard2
+    shield: mykeyboard2 rgbled_adapter
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    artifact-name: settings_reset
