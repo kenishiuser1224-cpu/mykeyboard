@@ -44,7 +44,7 @@
             sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
         };
 
-        default_layer {
+        number_layer {
             label = "NUM";
             bindings = <
                 &kp BSPC   &kp SLASH        &kp ASTERISK  &kp MINUS   &kp RET     &kp BSPC
