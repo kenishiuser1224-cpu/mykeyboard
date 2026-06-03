@@ -35,7 +35,7 @@
             label = "DEFAULT";
             bindings = <
                 &tog 1     &kp LS(N8)      &kp LS(N9)  &kp EQUAL   &kp C     &kp V
-                &kp N7     &kp N8           &kp N9        &kp PLUS    &kp UP      &kp BSPC
+                &kp N7     &kp N8           &tog 1        &kp PLUS    &kp UP      &kp BSPC
                 &kp N4     &kp N5           &kp N6        &kp C   &out OUT_TOG    &kp BSPC
                 &kp N1     &kp N2           &kp N3        &kp V   &kp RIGHT   &kp BSPC
                 &kp N0     &kp DOT          &mkp MCLK     &kp LALT    &kp DOWN    &kp BSPC
@@ -48,7 +48,7 @@
             label = "NUM";
             bindings = <
                 &tog 1     &kp SLASH        &kp ASTERISK  &kp MINUS   &kp RET     &kp BSPC
-                &kp N7     &kp N8           &kp N9        &kp PLUS    &kp UP      &kp BSPC
+                &kp N7     &kp N8           &tog 1        &kp PLUS    &kp UP      &kp BSPC
                 &kp N4     &kp N5           &kp N6        &kp C   &out OUT_TOG    &kp BSPC
                 &kp N1     &kp N2           &kp N3        &kp V  &kp RIGHT   &kp BSPC
                 &kp N0     &kp DOT          &mkp MCLK     &kp LALT    &kp DOWN    &kp BSPC
