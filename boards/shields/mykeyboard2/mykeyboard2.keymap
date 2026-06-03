@@ -47,7 +47,7 @@
         num_layer {
             label = "NUM";
             bindings = <
-                &tog 0     &kp SLASH        &kp ASTERISK  &kp MINUS   &kp RET     &kp BSPC
+                &tog 1     &kp SLASH        &kp ASTERISK  &kp MINUS   &kp RET     &kp BSPC
                 &kp N7     &kp N8           &kp N9        &kp PLUS    &kp UP      &kp BSPC
                 &kp N4     &kp N5           &kp N6        &kp LC(C)   &kp LEFT    &kp BSPC
                 &kp N1     &kp N2           &kp N3        &kp LC(V)   &kp RIGHT   &kp BSPC
