@@ -34,7 +34,7 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-                &out OUT_USB     &tog 1      &kp OUT_TOG  &kp EQUAL   &kp C     &kp V
+                &out OUT_USB     &tog 1      &out OUT_TOG  &kp EQUAL   &kp C     &kp V
                 &kp A     &kp N8           &tog 1        &kp PLUS    &kp UP      &kp BSPC
                 &kp A     &kp N5           &kp N6        &kp C   &out OUT_TOG    &kp BSPC
                 &kp N1     &kp N2           &kp N3        &kp V   &kp RIGHT   &kp BSPC
