@@ -29,6 +29,17 @@
     };
 
     macros {
+        shift_left: shift_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT)>;
+        };
+    
+        shift_right: shift_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT)>;
+        };
         mouse_copy: mouse_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -95,7 +106,7 @@
                 &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
             >;
-            sensor-bindings = <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>;
+            sensor-bindings = <&sensor_rotate_kp LEFT RIGHT>;
         };
     };
 };
