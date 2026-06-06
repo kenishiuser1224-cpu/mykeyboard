@@ -9,7 +9,7 @@
 
 #define DEFAULT 0
 #define NUM     1
-
+#define CTRL    2
 
 / {
     behaviors {
@@ -34,30 +34,42 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-                &out OUT_USB     &tog 1      &out OUT_TOG  &kp EQUAL   &kp C     &kp V
-                &kp A     &kp N8           &tog 1        &kp PLUS    &kp UP      &kp BSPC
-                &kp A     &kp N5           &kp N6        &kp C   &out OUT_TOG    &kp BSPC
-                &kp N1     &kp N2           &kp N3        &kp V   &kp RIGHT   &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
+                &tog 1     &kp LS(N9)      &kp LS(N0)  &kp EQUAL   &kp LS(TAB)      &kp LC(C)
+                &kp F2    &kp N8    &kp KP_MULTIPLY    &kp KP_MINUS    &kp LC(A)    &kp LC(V) 
+                &kp N7     &kp N8    &kp N9    &kp KP_PLUS   &none    &kp LC(Z)
+                &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &mo 2
+                &none    &kp N1     &kp N2    &kp N3    &kp RET    &kp DOT
+                &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
+                &kp LCTRL     &kp LALT    &mkp MCLK     &tog 5    &none    &none
             >;
-            // sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
         };
 
         num_layer {
             label = "NUM";
             bindings = <
-                &tog 1     &kp SLASH        &kp OUT_TOG  &kp MINUS   &kp RET     &kp BSPC
-                &kp A      &kp N8           &tog 1        &kp PLUS    &kp UP      &kp BSPC
-                &kp N4     &kp N5           &kp N6        &kp C   &out OUT_TOG    &kp BSPC
-                &kp N1     &kp N2           &kp N3        &kp V  &kp RIGHT   &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
-                &kp N0     &kp DOT          &kp A     &kp LALT    &kp DOWN    &kp BSPC
+                &tog 1    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
             >;
 
             // sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
         };
+        ctrl_layer {
+            label = "CTRL";
+            bindings = <
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans
+            >;
+            sensor-bindings = <&sensor_rotate_kp LC(LEFT) LC(RIGHT)>;
     };
 };
