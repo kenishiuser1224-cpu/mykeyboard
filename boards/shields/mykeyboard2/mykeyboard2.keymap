@@ -58,7 +58,7 @@
             bindings =
                 <&mkp RCLK>
                 , <&macro_wait_time 100>
-                , &kp LC(V)
+                , <&kp LC(V)>
                 ;
         };
     };
