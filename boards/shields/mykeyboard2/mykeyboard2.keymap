@@ -42,7 +42,6 @@
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
                 &kp LCTRL     &kp LALT    &mkp MCLK     &none   &none    &none
                 &none   &none    &none    &none   &none    &none
-                &none   &none    &none    &none   &none    &none
             >;
             sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
         };
@@ -58,7 +57,6 @@
                 &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans    &trans
             >;
 
             // sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
@@ -66,7 +64,6 @@
         layer_2 {
             label = "CTRL";
             bindings = <
-                &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans    &trans    &trans    &trans
