@@ -41,10 +41,11 @@
                 &tog 1    &kp N1     &kp N2    &kp N3    &kp RET    &kp DOT
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
                 &kp LCTRL     &kp LALT    &mkp MCLK     &none   &none    &none
-                &none   &none    &none    &none   &none    &none               
+                &tog 1    &kp N1     &kp N2    &kp N3    &kp RET    &kp DOT
+                
                 
             >;
-            sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
+            // sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>; &none   &none    &none    &none   &none    &none               
         };
 
         num_layer {
