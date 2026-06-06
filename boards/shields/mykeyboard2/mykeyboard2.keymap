@@ -40,7 +40,7 @@
                 ;
         };
 
-        mouse_copy: mouse_copy {
+        mouse_paste: mouse_paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -59,8 +59,8 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-                &tog 1     &kp LS(N9)      &kp LS(N0)  &kp EQUAL   &kp LS(TAB)      &kp LC(C)
-                &kp F2    &kp N8    &kp KP_MULTIPLY    &kp KP_MINUS    &kp LC(A)    &kp LC(V) 
+                &tog 1     &kp LS(N9)      &kp LS(N0)  &kp EQUAL   &kp LS(TAB)      &mouse_copy
+                &kp F2    &kp N8    &kp KP_MULTIPLY    &kp KP_MINUS    &kp LC(A)    &mouse_paste
                 &kp N7     &kp N8    &kp N9    &kp KP_PLUS   &none    &kp LC(Z)
                 &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &mo 2
                 &tog 1    &kp N1     &kp N2    &kp N3    &kp ENTER    &kp DOT
