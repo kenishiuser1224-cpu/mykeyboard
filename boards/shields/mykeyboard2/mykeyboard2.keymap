@@ -59,7 +59,7 @@
 
             // sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
         };
-        ctrl_layer {
+        layer_2 {
             label = "CTRL";
             bindings = <
                 &trans    &trans    &trans    &trans    &trans    &trans
