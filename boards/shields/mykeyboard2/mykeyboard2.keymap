@@ -71,5 +71,6 @@
                 &trans    &trans    &trans    &trans    &trans    &trans
             >;
             sensor-bindings = <&sensor_rotate_kp LC(LEFT) LC(RIGHT)>;
+        };
     };
 };
