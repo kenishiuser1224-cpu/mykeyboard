@@ -2,6 +2,12 @@
 #include <physical_layouts.dtsi>
 
 / {
+    nfc_pins_as_gpio: nfc-pins-as-gpio {
+        compatible = "nordic,nrf-nfct-pins-as-gpios";
+    };
+};
+
+/ {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
