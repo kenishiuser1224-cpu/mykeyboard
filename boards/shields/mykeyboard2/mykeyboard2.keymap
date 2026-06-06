@@ -28,6 +28,31 @@
         };
     };
 
+    macros {
+        mouse_copy: mouse_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&mkp RCLK>
+                , <&macro_wait_time 100>
+                , <&kp C>
+                ;
+        };
+
+        mouse_copy: mouse_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&mkp RCLK>
+                , <&macro_wait_time 100>
+                , &kp LC(V)
+                ;
+        };
+    };
+
+
     keymap {
         compatible = "zmk,keymap";
 
