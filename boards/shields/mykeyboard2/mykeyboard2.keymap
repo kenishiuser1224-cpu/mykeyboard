@@ -78,7 +78,9 @@
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
                 &kp LCTRL     &kp LALT    &mkp MCLK     &none   &none    &none
             >;
-            sensor-bindings = <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = 
+                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
+                <&kp LS(TAB) &kp TAB>;
         };
 
         num_layer {
@@ -107,6 +109,7 @@
                 &trans    &trans    &trans    &trans    &trans    &trans
             >;
             sensor-bindings = <&sensor_rotate_kp RIGHT LEFT>;
+            
         };
     };
 };
