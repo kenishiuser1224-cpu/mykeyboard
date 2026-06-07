@@ -73,14 +73,14 @@
                 &tog 1     &kp LS(N9)      &kp LS(N0)  &kp EQUAL   &kp LS(TAB)      &kp LC(C)
                 &kp F2    &kp N8    &kp KP_MULTIPLY    &kp KP_MINUS    &kp LC(A)    &kp LC(P)
                 &kp N7     &kp N8    &kp N9    &kp KP_PLUS   &none    &kp LC(Z)
-                &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &none
+                &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &mo 2
                 &tog 1    &kp N1     &kp N2    &kp N3    &kp ENTER    &kp DOT
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
-                &kp LCTRL     &kp LALT    &mkp MCLK     &mo 2   &none    &none
+                &kp LCTRL     &kp LALT    &mkp MCLK    &none        &none    &none
             >;
             sensor-bindings = 
-                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>,
-                <&sensor_rotate_kp LEFT RIGHT>;
+                <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>,
+                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
         };
 
         num_layer {
@@ -96,8 +96,8 @@
             >;
 
             sensor-bindings = 
-                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>,
-                <&sensor_rotate_kp LEFT RIGHT>;
+                <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>,
+                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
         };
         layer_2 {
             label = "CTRL";
@@ -111,8 +111,8 @@
                 &trans    &trans    &trans    &trans    &trans    &trans
             >;
             sensor-bindings = 
-                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>,
-                <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>;
+                <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>,
+                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
             
             
         };
