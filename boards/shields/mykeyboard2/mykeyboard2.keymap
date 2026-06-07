@@ -29,6 +29,14 @@
     };
 
     macros {
+        mclk_hold_tap: mclk_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mkp>, <&mkp>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
         shift_left: shift_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -76,7 +84,7 @@
                 &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &mo 2
                 &tog 1    &kp N1     &kp N2    &kp N3    &kp ENTER    &kp DOT
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
-                &kp LCTRL     &kp LALT    &mkp MCLK    &none        &none    &none
+                &kp LCTRL     &kp LALT    &mclk_hold_tap    &none        &none    &none
             >;
             sensor-bindings = 
                 <&sensor_rotate_kp LS(LEFT) LS(RIGHT)>,
