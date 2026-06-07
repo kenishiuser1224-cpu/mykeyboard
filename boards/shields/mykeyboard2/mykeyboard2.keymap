@@ -79,7 +79,7 @@
                 &kp LCTRL     &kp LALT    &mkp MCLK     &none   &none    &none
             >;
             sensor-bindings = 
-                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
+                <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>,
                 <&kp LS(TAB) &kp TAB>;
         };
 
