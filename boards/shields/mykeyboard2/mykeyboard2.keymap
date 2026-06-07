@@ -80,7 +80,7 @@
             >;
             sensor-bindings = 
                 <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>,
-                <&kp LS(TAB) &kp TAB>;
+                <&sensor_rotate_kp C_VOL_DN C_VOL_UP>;
         };
 
         num_layer {
