@@ -21,7 +21,7 @@
 include:
   - board: xiao_ble
     shield: mykeyboard
-  - board: xiao_ble
+  - board: seeeduino_xiao_ble
     shield: mykeyboard2 rgbled_adapter
     artifact-name: mykeyboard2
   - board: seeeduino_xiao_ble
