@@ -82,7 +82,7 @@
                 &kp F2    &kp LS(N5)     &kp KP_MULTIPLY    &kp KP_MINUS    &kp LC(A)    &kp LC(P)
                 &kp N7     &kp N8    &kp N9    &kp KP_PLUS   &none    &kp LC(Z)
                 &kp N4     &kp N5    &kp N6    &kp PRCNT    &kp TAB   &mo 2
-                &tog 1    &kp N1     &kp N2    &kp N3    &kp ENTER    &kp DOT
+                &bt BT_CLR    &kp N1     &kp N2    &kp N3    &kp ENTER    &kp DOT
                 &kp LEFT     &kp UP    &kp DOWN    &kp RIGHT    &kp N0     &kp LC(Y)
                 &kp LCTRL     &kp LALT    &mkp MCLK    &none        &none    &none
             >;
